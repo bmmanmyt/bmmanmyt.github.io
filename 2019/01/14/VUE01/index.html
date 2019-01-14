@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="王某人">
+    
+    
+    
+    
+    
+    
+    <title>VUE学习之路-01 | 后宫佳丽。</title>
+    <link href="”https://bmmanmyt.github.io“" rel="”prefetch”">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/aos.js"></script>
+    <script src="/js/highslide/highslide-full.min.js"></script>
+    <link rel="stylesheet" href="/js/highslide/highslide.css">
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/smallbg.jpg');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/http:/q2.qlogo.cn/headimg_dl?dst_uin=1363931801&spec=100'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+    <link href="/imgs/favicon.ico" rel="icon">
+</head></html>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-navbar-collapse" aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="https://bmmanmyt.github.io">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">シューマン</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-归档"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/node-js/">node.js</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/ES6-ES7/">ES6/ES7</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/JavaScript/">JavaScript</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/categories">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/node-js/">node.js</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/ES6新特性/">ES6新特性</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/JavaScript/">JavaScript</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="https://bmmanmyt.github.io">后宫佳丽。</a>
+        >
+        <span>VUE学习之路-01</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2019/01/14/VUE01/">VUE学习之路-01</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/VUE/">VUE</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2019-01-14
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2019/01/14/VUE01/">VUE学习之路-01</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2019-01-14
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/VUE/">VUE</a>
+                
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h1 id="Vue开发者工具"><a href="#Vue开发者工具" class="headerlink" title="Vue开发者工具"></a>Vue开发者工具</h1><h2 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h2><pre><code>1.  如果页面使用VUE.JS的生成/精简构建，默认情况下禁用DeVoices检查，因此VUE窗格不会出现。
+2.  为了使它通过文件：//协议打开的页面工作，需要在Chrome的扩展管理面板中检查“允许访问文件URL”。
+</code></pre><h2 id="手动安装"><a href="#手动安装" class="headerlink" title="手动安装"></a>手动安装</h2><ol>
+<li><p>确保你正在使用的 Node 版本在 6.0.0 以上，npm 版本在 3.0.0 以上。</p>
+</li>
+<li><p>克隆 Vue-Devtools 仓库</p>
+</li>
+<li>进入【vue-devtools】目录，使用 npm install 命令安装本仓库依赖的包</li>
+<li>执行 npm run build 命令</li>
+<li>打开 Chrome 浏览器菜单中的【扩展程序】</li>
+<li>启用【开发者模式】1</li>
+<li><p>点击【已解压的扩展程序】，选择 shells/chrome 目录，确定即可。常见</p>
+<h2 id="问题和解决方法"><a href="#问题和解决方法" class="headerlink" title="问题和解决方法"></a>问题和解决方法</h2><p>使用 file:// 协议本地工作时，控制台总是输出：’Download the Vue Devtools for a better development experience’。</p>
+<p>在浏览器右上角的 Vue-Devtools 图标上右键单击，选择【管理扩展程序】，然后选中【允许访问文件地址】</p>
+<h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><p>选项中主要影响模板或DOM元素的选项有el和template。</p>
+</li>
+</ol>
+<p><strong> el</strong>其作用是提供一个在页面上已经存在的DOM元素作为Vue实例的挂载目标。可以是CSS选择器，也可以是一个HTMLElement实例。</p>
+<p><strong> templates</strong> 字符串模板。会被挂载到el指定的挂载点元素上，挂载点元素及其内部的HTML代码都会被模板内容替换掉，除非模板的内容有分发slot。<br>在使用template选项时，我们往往不会把所有的HTML代码直接写到JS中，这样不但影响代码可读性而且不利于后期维护。所以我们经常将模板代码放到<script id="tpl" type="x-template"></script>标签中，然后将id属性的值#tpl赋值给template选项，这样就能将HTML代码从JS中分离出来，实例如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"app"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"main"</span>&gt;</span><br><span class="line">    &lt;p&gt;Hello world!&lt;/p&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">​</span></span><br><span class="line"><span class="regexp">&lt;script id="mytemplate" type="x-template"&gt;</span></span><br><span class="line"><span class="regexp">    &lt;div class="tpl"&gt;</span></span><br><span class="line"><span class="regexp">        &lt;p&gt;你好世界！&lt;/</span>p&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br><span class="line">​</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">        el: <span class="string">'#app'</span>,</span><br><span class="line">        template: <span class="string">'#mytemplate'</span></span><br><span class="line">    &#125;);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Vue.js 2.0要求模板代码必须要有一个根元素，即不允许组件模板为：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">&lt;script id=<span class="string">"mytemplate"</span> type=<span class="string">"x-template"</span>&gt;</span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"tpl"</span>&gt;</span><br><span class="line">        &lt;p&gt;你好世界！&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;</span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"tpl"</span>&gt;</span><br><span class="line">        &lt;p&gt;你好陈老师！&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>以上写法，报错！！！！！</p>
+<h2 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h2><p>Vue实例中可以通过data选项定义数据，这些数据可以在实例对应的模板中进行绑定并使用。需要注意的是，如果赋值给data选项的是一个对象，Vue实例会接管起student对象中所有的属性，而不会对传入的对象进行深拷贝。另外，我们也可以引用Vue实例vm中的$data来获取声明的数据，例如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">&lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">      &lt;h4&gt;&#123;&#123;name&#125;&#125;&lt;<span class="regexp">/h4&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br><span class="line">&lt;script src=<span class="string">"./vue.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">   </span><br><span class="line">  <span class="keyword">var</span> student = &#123;</span><br><span class="line">      name: <span class="string">'杨国兴'</span></span><br><span class="line">  &#125;;</span><br><span class="line">​</span><br><span class="line">  <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">      el: <span class="string">'#app'</span>,</span><br><span class="line">      data: student</span><br><span class="line">  &#125;);</span><br><span class="line">​</span><br><span class="line">  <span class="built_in">console</span>.log(vm.$data === student)       <span class="comment">// true</span></span><br><span class="line">  <span class="built_in">console</span>.log(vm.name === student.name )  <span class="comment">// true</span></span><br><span class="line">​</span><br><span class="line">  <span class="comment">// 设置属性也会影响到原始数据</span></span><br><span class="line">  vm.name = <span class="string">'冯晨飞'</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(student.name);              <span class="comment">// '冯晨飞'</span></span><br><span class="line">​</span><br><span class="line">  <span class="comment">// 反之亦然</span></span><br><span class="line">  student.name = <span class="string">'李天明'</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(vm.name);                   <span class="comment">// '李天明'</span></span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>然后我们可以在模板中使用就会输出vm.name的值，并且修改vm.name的值，模板中的值会随之改变，我们称这样的数据为响应式数据。</p>
+<p>注意，在初始化Vue实例的时候，尽量把所有变量的都设置好，如果事先不知道变量的值是什么，可以用undefined或null占位。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>我们可以通过methods对象定义Vue实例的方法，然后使用v-on指令来监听DOM事件，例如：</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">  &lt;button v-on:click=<span class="string">"sayName"</span>&gt;Watch<span class="string">'s your name ?&lt;/button&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">&lt;script&gt;</span></span><br><span class="line"><span class="string">  var vm = new Vue(&#123;</span></span><br><span class="line">      el: '#app',</span><br><span class="line">      data: &#123;</span><br><span class="line">        name: <span class="string">'王珊珊'</span></span><br><span class="line">      &#125;,</span><br><span class="line">      methods: &#123;</span><br><span class="line">        sayName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">          alert(<span class="keyword">this</span>.name);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Vue实例的生命周期"><a href="#Vue实例的生命周期" class="headerlink" title="Vue实例的生命周期"></a>Vue实例的生命周期</h2><p>  在创建Vue实例时会进行一系列的初始化步骤，比如建立数据观察，编译模板，创建数据绑定等。在此过程中，我们可以使用一些定义好的声明周期方法处理业务逻辑。<br>  <img src="./images/lifecycle.png" alt="图片"><br>  生命周期方法：</p>
+<p>方法    说明</p>
+<ol>
+<li><p>beforeCreate    在实例初始化时同步调用。此时数据观察、事件等都尚未初始化。</p>
+</li>
+<li><p>created    在实例创建之后调用。此时已完成数据绑定、事件方法，但尚未开始DOM编译，未挂载到document中。</p>
+</li>
+<li><p>beforeMount    在mounted之前执行。</p>
+</li>
+<li><p>mounted    在编译结束时调用。此时所有指令已生效，数据变化已能触发DOM更新，但不保证$el已经插入文档。</p>
+</li>
+<li><p>beforeUpdate    在实例挂载之后，再次更新实例（比如，更新data）时调用该方法，此时尚未更新DOM结构。</p>
+</li>
+<li><p>updated    在实例挂载之后，再次更新实例并更新完DOM结构之后调用。</p>
+</li>
+<li><p>beforeDestroy    在开始销毁实例时调用，此时实例仍然有效。</p>
+</li>
+<li><p>destroyed    实例被销毁之后调用。此时所有绑定和实例指令都已经解绑，子实例也被销毁。</p>
+</li>
+<li><p>activated    在动态组件初始化渲染的过程中调用该方法，需要配合动态组件keep-alive属性使用。</p>
+</li>
+<li><p>deactivated    在动态组件移出的过程中调用该方法，需要配合动态组件keep-alive属性使用。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">      el: <span class="string">'#content'</span>,</span><br><span class="line">      template: <span class="string">'#tpl'</span>,</span><br><span class="line">​</span><br><span class="line">      beforeCreate: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'beforeCreate'</span>);</span><br><span class="line">      &#125;,</span><br><span class="line">      created: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'created'</span>);</span><br><span class="line">      &#125;,</span><br><span class="line">      beforeMount: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'beforeMount'</span>);</span><br><span class="line">      &#125;,</span><br><span class="line">      mounted: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'mounted'</span>);</span><br><span class="line">      &#125;,</span><br><span class="line">      beforeUpdate: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'beforeUpdate'</span>);</span><br><span class="line">      &#125;,</span><br><span class="line">      updated: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'updated'</span>)</span><br><span class="line">      &#125;,</span><br><span class="line">      beforeDestroy: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'beforeDestroy'</span>);</span><br><span class="line">      &#125;,</span><br><span class="line">      destroyed: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'destroyed'</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="模板语法"><a href="#模板语法" class="headerlink" title="模板语法"></a>模板语法</h2><h3 id="插值"><a href="#插值" class="headerlink" title="插值"></a>插值</h3><p>在这里我们主要介绍Vue.js的数据绑定语法，后面出现的例子会基于以下JS代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">        el: <span class="string">'#app'</span>,</span><br><span class="line">        data: &#123;</span><br><span class="line">            id: <span class="number">1</span>,</span><br><span class="line">            index: <span class="number">0</span>,</span><br><span class="line">            name: <span class="string">'Vue'</span>,</span><br><span class="line">            avatar: <span class="string">''</span>,</span><br><span class="line">            count: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>],</span><br><span class="line">            names: [<span class="string">'Vue1.0'</span>, <span class="string">'Vue2.0'</span>],</span><br><span class="line">            items: [</span><br><span class="line">                </span><br><span class="line">            ]</span><br><span class="line">​</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+    </div>
+</article>
+
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get" action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            王某人
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="http://q2.qlogo.cn/headimg_dl?dst_uin=1363931801&spec=100" width="140" height="140" alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/01/14/VUE01/">VUE学习之路-01</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/01/10/Less入门/">Less入门</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/01/09/node-js搭建服务器-1/">node.js搭建服务器——前后端分离</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/01/08/利用gulp与npm创建对网页内容的编辑刷新自动化/">利用gulp与npm创建自动化工具</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/01/07/gulp自动化构建工具/">gulp :自动化构建工具</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/01/07/npm第三方包管理器/">npm管理器</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/01/07/Commonjs规范/">Commonjs规范</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/01/07/node-js介绍/">node.js简单介绍</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/01/05/箭头函数/">箭头函数</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/01/04/JavaScript-简答题/">JavaScript 简答题</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/01/07/Commonjs规范/">Commonjs规范</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/01/07/gulp自动化构建工具/">gulp :自动化构建工具</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/01/07/node-js介绍/">node.js简单介绍</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/01/07/npm第三方包管理器/">npm管理器</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/01/08/利用gulp与npm创建对网页内容的编辑刷新自动化/">利用gulp与npm创建自动化工具</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/01/05/箭头函数/">箭头函数</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/01/04/JavaScript-简答题/">JavaScript 简答题</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/01/10/Less入门/">Less入门</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/01/09/node-js搭建服务器-1/">node.js搭建服务器——前后端分离</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/01/14/VUE01/">VUE学习之路-01</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2019/01/14/VUE01/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2019/01/14/VUE01/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2019/01/14/VUE01/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/node-js/" style="font-size: 12.390022282203827px;" class="tag-cloud-link">node.js</a>
+    
+    <a href="/tags/ES6新特性/" style="font-size: 17.86337469910778px;" class="tag-cloud-link">ES6新特性</a>
+    
+    <a href="/tags/JavaScript/" style="font-size: 15.682604194868508px;" class="tag-cloud-link">JavaScript</a>
+    
+    <a href="/tags/CSS进阶/" style="font-size: 10.807468111086141px;" class="tag-cloud-link">CSS进阶</a>
+    
+    <a href="/tags/VUE/" style="font-size: 17.4224805339433px;" class="tag-cloud-link">VUE</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="www.baidu.com" target="_blank">百度一下</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1363931801&amp;site=qq&amp;menu=yes" target="_blank">QQ</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2019 王某人 Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+<script src="/js/activate-power-mode.js"></script>
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: 'http://pkxw6346q.bkt.clouddn.com/background',
+      ext: 'jpg',
+      maxCount: '6'
+    }
+</script>
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+</html>
